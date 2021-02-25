@@ -62,4 +62,12 @@ public class DAOFactory {
     public DAOConcernerImpl getConcernerDAO(){
         return new DAOConcernerImpl(this);
     }
+
+    public DAOCentre getCentreDao() {
+        return new DAOCentreImpl(this);
+    }
+
+    public DAOVille getVilleDao() {
+        return new DAOVilleImpl(this);
+    }
 }

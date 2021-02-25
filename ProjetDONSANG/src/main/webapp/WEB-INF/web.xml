@@ -26,5 +26,42 @@
         <param-value>fatimazahra</param-value>
     </context-param>
 
-   
+    <servlet>
+        <servlet-name>ajouterCentre</servlet-name>
+        <servlet-class>servelets.ajouterCentre</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ajouterCentre</servlet-name>
+        <url-pattern>/ajouterCentre</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>supprimerCentre</servlet-name>
+        <servlet-class>servelets.supprimerCentre</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>supprimerCentre</servlet-name>
+        <url-pattern>/supprimerCentre</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mettreAjourCentre</servlet-name>
+        <servlet-class>servelets.mettreAjourCentre</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mettreAjourCentre</servlet-name>
+        <url-pattern>/updateCentre</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>dashBoardAdmin</servlet-name>
+        <servlet-class>servelets.adminMenu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dashBoardAdmin</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
