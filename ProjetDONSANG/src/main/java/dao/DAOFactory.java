@@ -36,7 +36,7 @@ public class DAOFactory {
         } catch (ClassNotFoundException e) {
             throw new DAOConfigurationException("Le driver est introuvable dans le classpath.", e);
         }
-        DAOFactory instance = new DAOFactory("jdbc:mysql://localhost:3306/sang?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","");
+        DAOFactory instance = new DAOFactory("jdbc:mysql://localhost:3306/sang","root","");
         return instance;
     }
 
@@ -70,4 +70,5 @@ public class DAOFactory {
     public DAOVille getVilleDao() {
         return new DAOVilleImpl(this);
     }
+    public DAOAdminImpl getAdminDao () {return new DAOAdminImpl(this);}
 }

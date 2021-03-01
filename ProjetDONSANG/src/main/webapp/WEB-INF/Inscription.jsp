@@ -13,10 +13,10 @@
     <title>Inscription</title>
 </head>
 <body>
-<form method="post" action="Inscription">
+<form method="post" action="inscription">
     <fieldset>
         <legend>Inscription</legend>
-        <p>Vous pouvez vous s'inscrire via ce formulaire.</p>
+        <p>Vous pouvez vous inscrire via ce formulaire.</p>
 
         <label for="nom">Nom d'utilisateur : <span class="requis">*</span></label>
         <input type="text" id="nom" name="nom" value="<c:out value='${ utilisateur.nomutilisateur}'/>" size="20" maxlength="60" />

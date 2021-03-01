@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Fatima zahra Azennag
-  Date: 16/02/2021
-  Time: 15:17
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -15,8 +8,8 @@
     <title>Insert title here</title>
 </head>
 <body>
-<c:if test="${(not empty sessionScope.utilisateur) }">
-    <c:redirect url="/" />
+<c:if test="${(not empty sessionScope.admin) }">
+    <c:redirect url="/index.jsp" />
 </c:if>
 <div class="container col-md-4 align-content-center mt-5 mb-5">
     <div class="card">
@@ -26,7 +19,7 @@
             <strong>Sign in</strong>
         </h5>
         <div class="card-body">
-            <form class="text-center border border-light p-3" method="post" action="Login">
+            <form class="text-center border border-light p-3" method="post" action="loginAdmin">
                 <!-- Email -->
                 <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail"
                        name="email">
@@ -51,12 +44,6 @@
 
                 <!-- Sign in button -->
                 <button class="btn btn-block my-4" style="background: #AE1F23" type="submit">Sign in</button>
-
-                <!-- Register -->
-                <p>Not a member?
-                    <a href="inscription">Register</a>
-                </p>
-
 
 
             </form>

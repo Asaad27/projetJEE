@@ -16,7 +16,7 @@
 </head>
 <body>
 <c:if test="${(not empty sessionScope.utilisateur) }">
-    <c:redirect url="/" />
+    <c:redirect url="/"></c:redirect>
 </c:if>
 <div class="container col-md-4 align-content-center mt-5 mb-5">
     <div class="card">
@@ -54,7 +54,7 @@
 
                 <!-- Register -->
                 <p>Not a member?
-                    <a href="inscription">Register</a>
+                    <a href="inscription">R,,egister</a>
                 </p>
 
 

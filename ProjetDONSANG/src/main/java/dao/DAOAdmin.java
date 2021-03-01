@@ -9,7 +9,5 @@ public interface DAOAdmin {
     public Admin trouver(String email);
     public void supprimer(int idAdmin);
     public List<Admin> lister();
-    public Admin trouverAdminParID(int idAdmin);
-
-
+    public Admin getAdminsByID(int idAdmin);
 }

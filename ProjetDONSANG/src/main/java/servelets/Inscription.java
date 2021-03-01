@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Inscription", value = "/Inscription")
+@WebServlet(name = "Inscription", value = "/inscription")
 public class Inscription extends HttpServlet {
     public static final String CONF_DAO_FACTORY = "daofactory";
     public static final String INSCRIPTION_FORM="/WEB-INF/Inscription.jsp";
