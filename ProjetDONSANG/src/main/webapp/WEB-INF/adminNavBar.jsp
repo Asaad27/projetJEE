@@ -18,7 +18,7 @@
                        aria-expanded="false">
                         <i class="fas fa-user"></i> ${sessionScope.admin.nomAdmin} </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                        <a class="dropdown-item" href="logout">Log out</a>
+                        <a class="dropdown-item" href="">Log out</a>
                     </div>
                 </li>
             </ul>

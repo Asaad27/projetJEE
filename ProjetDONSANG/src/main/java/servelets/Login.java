@@ -34,21 +34,15 @@ public class Login extends HttpServlet {
 
             utilisateur = utilisateurDAO.trouver(email);
 
-
-
             if(utilisateur == null ){
                 String msg = "informations incorrectes  ";
                 request.setAttribute("msg", msg);
                 this.getServletContext().getRequestDispatcher(LOGIN_FORM).forward(request, response);
 
             } else {
-                if(utilisateur != null){
                     HttpSession session = request.getSession();
                     session.setAttribute("utilisateur", utilisateur);
                     response.sendRedirect("MesDemandes");
-
-
-                }
             }
         }
 

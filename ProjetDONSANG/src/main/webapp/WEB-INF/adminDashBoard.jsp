@@ -1,8 +1,15 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: yami
+  Date: 01/03/2021
+  Time: 14:43
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <style>
     .form-group.required .control-label:after {
         content:" *";
-        color:red;
+        color: #ff0000;
     }
     .form-control:focus {
         border-color: #AE1F23;
@@ -33,9 +40,16 @@
             <div class="section-title text-center wow zoomInfont-weight-bold">
                 <h1>Center Management</h1>
             </div>
+            <%--alert--%>
+            <c:if test="${not empty msg}">
+                <p>
+                <div class="alert alert-danger">${msg}</div>
+                </p>
+            </c:if>
 
             <div class="row mt-5">
-                <div class="col-md-3 offset-2"><a href="/ajouterCentre" class="btn btn-success">Create Center</a></div>
+                <div class="col-md-3 offset-2"><a href="" class="btn btn-success">Create Center</a></div>
+                <div class="col-md-3"><a href="" data-toggle="modal" data-target="#updateModal" class="btn btn-warning">Update Center</a></div>
                 <div class="col-md-3"><a href="" data-toggle="modal" data-target="#deleteModel" class="btn btn-danger">Delete Center</a></div>
             </div>
         </div>
@@ -88,6 +102,34 @@
 <%@include file="Footer.jsp"%>
 </body>
 </html>
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Update Centre</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="get" action="aaaaaaaaaaaaaaaaaaaaaaaaaaction">
+                <div class="modal-body mx-3">
+                    <div class="row ">
+                        <div class="form-group required col-sm-12">
+                            <label for="id" class='control-label'>Id Centre</label>
+                            <input type="text" name="update" class="form-control" id="id" placeholder="Identifiant Centre">
+                            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <input type="submit" class="btn btn-warning" value="Update"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
@@ -99,7 +141,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="post" action="/supprimerCentre">
+            <form method="post" action="/deleteCentre">
                 <div class="modal-body mx-3">
                     <div>
                         <!-- Nom input -->

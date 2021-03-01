@@ -33,10 +33,7 @@ public class LoginAdmin extends HttpServlet {
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
         admin = adminDAO.trouver(email);
-
-
 
         if(admin == null ){
             String msg = "informations incorrectes  ";
@@ -46,7 +43,7 @@ public class LoginAdmin extends HttpServlet {
         } else {
                 HttpSession session = request.getSession();
                 session.setAttribute("admin", admin);
-                //response.sendRedirect("/");             //DASHBOARD ADMIN
+                response.sendRedirect("dashboard");             //DASHBOARD ADMIN
         }
     }
 
@@ -54,9 +51,8 @@ public class LoginAdmin extends HttpServlet {
         HttpSession session = request.getSession();
         if((Admin)session.getAttribute("admin") == null)
             this.getServletContext().getRequestDispatcher(LOGIN_FORM).forward(request, response);
-
         else{
-           // response.sendRedirect("/");
+            response.sendRedirect("dashboard");
         }
     }
 }

@@ -12,7 +12,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Login user</title>
 </head>
 <body>
 <c:if test="${(not empty sessionScope.utilisateur) }">

@@ -53,16 +53,6 @@
         <url-pattern>/updateCentre</url-pattern>
     </servlet-mapping>
 
-
-    <servlet>
-        <servlet-name>dashBoardAdmin</servlet-name>
-        <servlet-class>servelets.adminMenu</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>dashBoardAdmin</servlet-name>
-        <url-pattern>/dashboard</url-pattern>
-    </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>Inscription</servlet-name>
         <url-pattern>/inscription</url-pattern>
@@ -80,6 +70,13 @@
         <servlet-name>LoginAdmin</servlet-name>
         <servlet-class>servelets.LoginAdmin</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>DashBoardAdmin</servlet-name>
+        <servlet-class>servelets.DashBoardAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashBoardAdmin</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
 
 </web-app>

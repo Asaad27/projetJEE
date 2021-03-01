@@ -5,11 +5,11 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Login Admin</title>
 </head>
 <body>
 <c:if test="${(not empty sessionScope.admin) }">
-    <c:redirect url="/index.jsp" />
+    <c:redirect url="/" />
 </c:if>
 <div class="container col-md-4 align-content-center mt-5 mb-5">
     <div class="card">
