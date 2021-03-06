@@ -7,15 +7,16 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Login user</title>
 </head>
 <body>
 <c:if test="${(not empty sessionScope.utilisateur) }">
-    <c:redirect url="/"></c:redirect>
+    <c:redirect url="/" />
 </c:if>
 <div class="container col-md-4 align-content-center mt-5 mb-5">
     <div class="card">
@@ -53,7 +54,7 @@
 
                 <!-- Register -->
                 <p>Not a member?
-                    <a href="/registre">Register</a>
+                    <a href="inscription">Register</a>
                 </p>
 
 
