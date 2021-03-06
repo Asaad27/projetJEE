@@ -90,6 +90,7 @@
       <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/lib/Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/lib/Style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/ProjetDONSANG-1.0-SNAPSHOT/WEB-INF/addDemande.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/ProjetDONSANG-1.0-SNAPSHOT/WEB-INF/addDemande.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetJEE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projetJEE.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -301,6 +302,7 @@
       <workItem from="1613747844421" duration="1631000" />
       <workItem from="1613915279379" duration="2216000" />
       <workItem from="1615029879489" duration="394000" />
+      <workItem from="1615030300520" duration="1046000" />
     </task>
     <servers />
   </component>
