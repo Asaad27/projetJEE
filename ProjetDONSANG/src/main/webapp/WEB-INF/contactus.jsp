@@ -1,16 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
-  User: HP
+  User: Fatima zahra Azennag
   Date: 20/02/2021
-  Time: 15:20
+  Time: 20:19
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <div class="container col-md-8 align-content-center">
     <!--Section: Contact v.2-->
     <section class="mb-4">
@@ -99,8 +96,8 @@
                     </div>
 
                 </form>
-                <c:if test="${not empty message}">
-                    <div class='alert ${status == 'success' ? 'alert-success' : 'alert-danger'}'>${message}</div>
+                <c:if test="${not empty Message}">
+                    <div class='alert ${Message == 'The e-mail was sent successfully' ? 'alert-success' : 'alert-danger'}'>${Message}</div>
                 </c:if>
                 <div class="status"></div>
             </div>
@@ -128,5 +125,4 @@
 
     </section>
 </div>
-</body>
-</html>
+

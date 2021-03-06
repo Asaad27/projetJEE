@@ -26,57 +26,5 @@
         <param-value>fatimazahra</param-value>
     </context-param>
 
-    <servlet>
-        <servlet-name>ajouterCentre</servlet-name>
-        <servlet-class>servelets.ajouterCentre</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ajouterCentre</servlet-name>
-        <url-pattern>/ajouterCentre</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>supprimerCentre</servlet-name>
-        <servlet-class>servelets.supprimerCentre</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>supprimerCentre</servlet-name>
-        <url-pattern>/supprimerCentre</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>mettreAjourCentre</servlet-name>
-        <servlet-class>servelets.mettreAjourCentre</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>mettreAjourCentre</servlet-name>
-        <url-pattern>/updateCentre</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>Inscription</servlet-name>
-        <url-pattern>/inscription</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>Inscription</servlet-name>
-        <servlet-class>servelets.Inscription</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>LoginAdmin</servlet-name>
-        <url-pattern>/loginAdmin</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>LoginAdmin</servlet-name>
-        <servlet-class>servelets.LoginAdmin</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DashBoardAdmin</servlet-name>
-        <servlet-class>servelets.DashBoardAdmin</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DashBoardAdmin</servlet-name>
-        <url-pattern>/dashboard</url-pattern>
-    </servlet-mapping>
-
+   
 </web-app>

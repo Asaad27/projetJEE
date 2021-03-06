@@ -1,0 +1,261 @@
+.erreur,.requis{
+    color:red;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+body{
+    height:900px ;
+}
+
+#grad1 {
+    background-color:  #9C27B0;
+    background-image: linear-gradient(120deg, #FF4081, #81D4FA);
+}
+#msform{
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    margin-left: 500px;
+    z-index:-1;
+}
+
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px;
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    margin-left: 500px;
+}
+
+#progressbar .active {
+    color: #000000;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 10%;
+    float: left;
+    position: relative;
+}
+
+#progressbar #etape1:before {
+    font-family: FontAwesome;
+    content: '';
+
+}
+
+#progressbar #etape2:before {
+    font-family: FontAwesome;
+    content: '';
+
+}
+
+#progressbar #etape3:before {
+    font-family: FontAwesome;
+    content: '';
+
+}
+
+#progressbar #etape4:before {
+    font-family: FontAwesome;
+    content: '';
+
+}
+#progressbar #etape5:before {
+    font-family: FontAwesome;
+    content: '';
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: 0;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #ff3333;
+}
+
+
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+.choix{
+    display: flex;
+    width: 100px;
+    height: 50px;
+
+}
+.choix > p{
+
+    margin: 10px;
+
+
+}
+.choix > p > input{
+    width: 100px;
+    height: 50px;
+    background-color:#D92228;
+    color: white;
+    border-radius: 5px;
+    border:  #D92228;
+}
+input{
+    width: 100px;
+    height: 50px;
+    background-color:  #D92228;
+    color: white;
+    border-radius: 5px;
+    border:  #D92228;
+}
+
+#msform .suivant1:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
+}
+.question{
+    font-weight:bold;
+    color:black;
+    font-size:15px;
+
+
+}
+.passer{
+    margin-top: 50px;
+    color: white;
+    display: flex;
+
+    margin-left: 580px;
+
+}
+.passer >p > input{
+    margin-left: 10px;
+
+}
+.error{
+    color:red;
+    margin-top: 10px;
+}
+

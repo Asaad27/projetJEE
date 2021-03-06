@@ -10,32 +10,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <%@include file="../header.jsp"%>
+
 </head>
-<body class="grey lighten-5">
-<h1>Les Demandes de sang dont vous pouvez répondre  !!!! </h1>
+<body  style="height:1500px;">
+<img src="img/don-sang.jpg" class="bg1"/>
+<%@include file="../navBar.jsp"%>
 
-<main>
 
-    <div class="container">
-        <br><br><br>
+<main style="margin-left: 200px;">
+
         <div class="row mb-4 mt-3">
 
-            <div class="col-6">
+            <div class="col-6" style="margin-left: 300px;margin-bottom: 20px;">
                 <form class="form-inline md-form mr-auto" method="post" action="UsersDemandes">
                     <select class="form-control mr-sm-2 my-0" style="font-size: 15px;"  name="citySelect">
-                        <option value="default">Filter By City : </option>
+                        <option value="default">Filtrer par ville : </option>
                         <c:forEach items="${villes}" var="ville" >
                             <option value="${ville.idVille}"><c:out value="${ville.nomVille}"/></option>
                         </c:forEach>
                     </select>
-                    <button class="btn btn-outline-info btn-rounded btn-md my-0 waves-effect" style="border-color: #D92228 !important; font-size: 10px; color: #D92228 !important;"  type="submit">Submit</button>
+                    <button type="submit" class="btn btn-danger ">Chercher</button>
                 </form>
             </div>
 
 
 
 
-        </div>
+
 
         <!--Section: Requests-->
         <c:if test="${empty requests}">
@@ -67,35 +69,26 @@
                 <!--/.Card-->
             </div>
         </c:if>
+
         <c:if test="${not empty requests}">
-            <section>
-                <div>Les Demandes</div>
+            <section style="width: 600px;margin-left: 300px;" id="section2">
+
                 <c:forEach var="i" begin="0" end="${requests.size()-1}">
 
-                    <div class="well">
-                        <div class="media">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h2 class="panel-title" >Demande de : ${users.get(i).nomutilisateur} ${users.get(i).prenomutilisateur}</h2>
+                      </div>
 
-                            <div class="media-body">
-                                <h2 class="media-heading">${requests.get(i).titreDemande}</h2>
-                                <p class="text-right">Demande de : ${users.get(i).nomutilisateur} ${users.get(i).prenomutilisateur}</p>
-                                <p class="text-right">Son téléphone : ${users.get(i).teleutilisateur}</p>
-                                <p>${requests.get(i).descriptionDemande}</p>
-                                <ul class="list-inline list-unstyled">
-                                    <li><span><i class="glyphicon glyphicon-calendar"></i> ${requests.get(i).dateDemande} </span></li>
+                      <div class="panel-body">
+                          <h3 >${requests.get(i).titreDemande}</h3>
+                          <p >${requests.get(i).descriptionDemande}</p>
 
-                                    <li>|</li>
-                                    <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-                                    <li>|</li>
-                                    <li>
-                                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                                        <span><i class="fa fa-facebook-square"></i></span>
-                                        <span><i class="fa fa-twitter-square"></i></span>
-                                        <span><i class="fa fa-google-plus-square"></i></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                      </div>
+                      <div class="panel-footer">
+                          <span><i class="fas fa-calendar-alt"></i>  ${requests.get(i).dateDemande} </span>| <span><i class="glyphicon glyphicon-earphone"></i>  ${users.get(i).teleutilisateur} </span>
+                      </div>
+                  </div>
 
                 </c:forEach>
 
@@ -106,9 +99,32 @@
             </section>
         </c:if>
     </div>
+
 </main>
 
+<section style="margin-left: 740px;" class="pagination">
+    <c:if test="${pageCourante != 1}">
+        <button><a href="<c:url value="/UsersDemandes?pageCourante=${pageCourante - 1}"/>">&laquo;</a></button>
+    </c:if>
 
+
+        <c:forEach begin="1" end="${nbPages}" var="i">
+            <c:choose>
+                <c:when test="${pageCourante eq i}">
+                <button>${i}</button>
+                </c:when>
+                <c:otherwise>  <button><a href="UsersDemandes?pageCourante=${i}">${i}</a></button> </c:otherwise>
+            </c:choose>
+
+        </c:forEach>
+    <c:if test="${pageCourante lt nbPages}">
+    <button><a href="<c:url value="/UsersDemandes?pageCourante=${pageCourante + 1}"/>">&raquo;</a><button>
+    </c:if>
+</section>
+
+
+
+<%@include file="../footer.jsp"%>
 
 </body>
 </html>

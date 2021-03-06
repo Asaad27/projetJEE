@@ -5,69 +5,74 @@
   Time: 15:17
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Login user</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <%@include file="../header.jsp"%>
 </head>
-<body>
+<body class="bg" style="z-index: 1;">
+
+<%@include file="../navBar.jsp"%>
+
 <c:if test="${(not empty sessionScope.utilisateur) }">
-    <c:redirect url="/" />
+    <c:redirect url="/"></c:redirect>
 </c:if>
-<div class="container col-md-4 align-content-center mt-5 mb-5">
-    <div class="card">
-        <!-- Default form login -->
 
-        <h5 class="card-header white-text text-center py-4" style="background: #AE1F23">
-            <strong>Sign in</strong>
-        </h5>
-        <div class="card-body">
-            <form class="text-center border border-light p-3" method="post" action="Login">
-                <!-- Email -->
-                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail"
-                       name="email">
-
-                <!-- Password -->
-                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"
-                       name="password">
-
-                <div class="d-flex justify-content-around">
-                    <div>
-                        <!-- Remember me -->
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                            <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-                        </div>
-                    </div>
-                    <div>
-                        <!-- Forgot password -->
-                        <a href="">Forgot password?</a>
-                    </div>
-                </div>
-
-                <!-- Sign in button -->
-                <button class="btn btn-block my-4" style="background: #AE1F23" type="submit">Sign in</button>
-
-                <!-- Register -->
-                <p>Not a member?
-                    <a href="inscription">Register</a>
-                </p>
-
-
-
-            </form>
-            <!-- Default form login -->
-        </div>
+<section style="" >
+<form style="width: 500px;position: absolute;top:170px;left:540px;background-color: white;padding:50px;" action="Login" method="post">
+    <!-- Email input -->
+    <h5 class="card-header white-text text-center py-4" style="background: #ff4d4d;color:white;height: 40px;padding-top: 10px;">
+        <strong >Connexion</strong>
+    </h5>
+    <div class="form-outline mb-4">
+        <input type="email" id="form1Example1" class="form-control" name="email"  />
+        <label class="form-label" for="form1Example1"> Addresse Email </label>
     </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="form1Example2" class="form-control" name="password" />
+        <label class="form-label" for="form1Example2">Mot de passe</label>
+    </div>
+
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+        <div class="col justify-content-center" style="display: flex;">
+            <!-- Checkbox -->
+            <div class="form-check" style="margin-left:15px;">
+                <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="form1Example3"
+                        checked
+                />
+                <label class="form-check-label" for="form1Example3"> Se souvenir de moi </label>
+            </div>
+            <div class="col" style=" margin-left: 120px;margin-top: 2px;">
+                <!-- Simple link -->
+                <a href="#!">Mot de passe oubliè?</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-danger btn-block">Se Connecter</button>
+</form>
+</section>
     <c:if test="${not empty msg}">
         <p>
         <div class="alert alert-danger">${msg}</div>
         </p>
     </c:if>
-</div>
+
+<%@include file="../footer.jsp"%>
 </body>
 </html>
