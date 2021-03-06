@@ -31,6 +31,11 @@ public class UsersDemandes extends HttpServlet {
         groupSangList = groupSangDao.lister();
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int page=1;
+        int nbRecordsPerPage=5;
+        if(request.getParameter("pageCourante")!=null){
+            page=Integer.parseInt(request.getParameter("pageCourante"));
+        }
         String ville = request.getParameter("citySelect");
         String groupe = request.getParameter("groupSangSelect");
         int idVille=Integer.parseInt(ville);
@@ -49,11 +54,15 @@ public class UsersDemandes extends HttpServlet {
         for(DemandeUtilisateur demande:requestsFil){
             Utilisateur user=utilisateurDao.getusersByID(demande.getIdutilisateur());
             users.add(user);}
-
+        int nbRecords=requestsFil.size();
+        int nbPages=(int)Math.ceil(nbRecords*1.0/nbRecordsPerPage);
+        List<DemandeUtilisateur> mesdemandes = Autre.filterPagination(requestsFil,(page-1)*nbRecordsPerPage,nbRecordsPerPage*(page) < nbRecords?nbRecordsPerPage*(page) :(nbRecords));
         request.setAttribute("users",users);
         request.setAttribute("requests", requestsFil);
         request.setAttribute("villes",villes);
         request.setAttribute("groupSangList",groupSangList);
+        request.setAttribute("nbPages",nbPages);
+        request.setAttribute("pageCourante",page);
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/UsersDemandes.jsp").forward(request, response);
 
@@ -61,10 +70,16 @@ public class UsersDemandes extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int page=1;
+        int nbRecordsPerPage=5;
+        if(request.getParameter("pageCourante")!=null){
+            page=Integer.parseInt(request.getParameter("pageCourante"));
+        }
         Utilisateur utilisateur=(Utilisateur) request.getSession().getAttribute("utilisateur");
         List<DemandeUtilisateur> requests=demandeDao.getAllDemands(utilisateur.getIdvilleutilisateur());
         int idgroupe=utilisateur.getIdgrouputilisateur();
         List<DemandeUtilisateur> requestsFil=new ArrayList<DemandeUtilisateur>();
+
         List<Utilisateur> users=new ArrayList<Utilisateur>();
         for(DemandeUtilisateur demande:requests){
             if(Autre.filterBygroup(demande.getSangGroups(),idgroupe)){
@@ -72,14 +87,20 @@ public class UsersDemandes extends HttpServlet {
             }
 
         }
+
         for(DemandeUtilisateur demande:requestsFil){
             Utilisateur user=utilisateurDao.getusersByID(demande.getIdutilisateur());
             users.add(user);}
+        int nbRecords=requestsFil.size();
+        int nbPages=(int)Math.ceil(nbRecords*1.0/nbRecordsPerPage);
+        List<DemandeUtilisateur> mesdemandes = Autre.filterPagination(requestsFil,(page-1)*nbRecordsPerPage,nbRecordsPerPage*(page) < nbRecords?nbRecordsPerPage*(page) :(nbRecords));
 
         request.setAttribute("users",users);
-        request.setAttribute("requests", requestsFil);
+        request.setAttribute("requests", mesdemandes);
         request.setAttribute("villes",villes);
         request.setAttribute("groupSangList",groupSangList);
+        request.setAttribute("nbPages",nbPages);
+        request.setAttribute("pageCourante",page);
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/UsersDemandes.jsp").forward(request, response);
     }

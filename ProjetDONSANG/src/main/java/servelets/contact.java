@@ -1,5 +1,6 @@
 package servelets;
 
+
 import autre.EmailUtility;
 import beans.*;
 import dao.*;
@@ -49,19 +50,26 @@ public class contact extends HttpServlet {
         String subject = request.getParameter("subject");
         String pass = request.getParameter("pass");
         String email = request.getParameter("email");
-
+        String resultMessage="";
         try {
             EmailUtility.sendEmail(host,port,email,pass,usere,subject,message);
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        }
 
+
+                resultMessage = "The e-mail was sent successfully";
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                resultMessage = "There were an error: " + ex.getMessage();
+            } finally {
+                request.setAttribute("Message", resultMessage);
+            }
+        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/contactus.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
     }
 }
+

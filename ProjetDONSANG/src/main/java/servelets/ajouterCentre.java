@@ -1,108 +1,116 @@
 package servelets;
 
-
 import beans.Admin;
 import beans.Centre;
 import beans.Ville;
-import dao.DAOCentre;
-import dao.DAOFactory;
-import dao.DAOVille;
+import dao.*;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
+@WebServlet(name = "ajouterCentre", value = "/ajouterCentre")
 public class ajouterCentre extends HttpServlet {
     private DAOFactory daoFactory;
     private DAOVille villeDao;
     private HttpSession session;
-    private DAOCentre centreDao;
+    private daoCentre centreDao;
 
     @Override
     public void init() throws ServletException {
         super.init();
         daoFactory=DAOFactory.getInstance();
-        villeDao=daoFactory.getVilleDao();
-        centreDao=daoFactory.getCentreDao();
+        villeDao=daoFactory.getVilleDAO();
+        centreDao=daoFactory.getCentreDAO();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        session=request.getSession();
-        if(session.getAttribute("admin")==null){
-            try {
-                response.sendRedirect("/admin");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else{
-            String nomCentre=request.getParameter("nom");
-            String emailCentre=request.getParameter("email");
-            String passwordCentre=request.getParameter("password");
-            String addresseCentre=request.getParameter("addresse");
-            String strIdVille=request.getParameter("ville");
-            String gsm=request.getParameter("tele");
+        String ajouter = request.getParameter("ajouter");
+        String modifier = request.getParameter("modifier");
+        String supprimer = request.getParameter("supprimer");
+   if(ajouter!=null){
+        String nomCentre = request.getParameter("nom");
+        String emailCentre = request.getParameter("email");
+        String passwordCentre = request.getParameter("password");
+        String addresseCentre = request.getParameter("addresse");
+        String strIdVille = request.getParameter("ville");
+        String gsm = request.getParameter("tele");
 
-            System.out.println(nomCentre+" "+emailCentre+" "+passwordCentre+" "+addresseCentre+" "+strIdVille+" "+gsm);
-            // validaton des champs
-            if(nomCentre.trim().isEmpty()||emailCentre.trim().isEmpty()||passwordCentre.trim().isEmpty()||addresseCentre.trim().isEmpty()
-                    ||strIdVille.trim().isEmpty()||gsm.trim().isEmpty()){
-                request.setAttribute("flashMessageFaild","Please complete all fields");
-                returnFormulaire(request,response);
-            }else{
-                //validation pour chaque champs
-                String errors="";
-                errors+=validationField(emailCentre,"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[a-z]{2,6}$","Email is invalid <br>");
-                errors+=validationField(passwordCentre,"^.{6,30}$","Error must have beetwen 6 and 30 caracter<br>");
-                errors+=validationField(gsm,"^(\\+212|0)[0-9]{9}$","Number gsm is invalid<br>");
-                if(!errors.isEmpty()){
-                    request.setAttribute("flashMessageFaild",errors);
-                    returnFormulaire(request,response);
-                }else{
+        System.out.println(nomCentre + " " + emailCentre + " " + passwordCentre + " " + addresseCentre + " " + strIdVille + " " + gsm);
+        // validaton des champs
+        if (nomCentre.trim().isEmpty() || emailCentre.trim().isEmpty() || passwordCentre.trim().isEmpty() || addresseCentre.trim().isEmpty()
+                || strIdVille.trim().isEmpty() || gsm.trim().isEmpty()) {
+            request.setAttribute("flashMessageFaild", "Please complete all fields");
+            returnFormulaire(request, response);
+        } else {
+            //validation pour chaque champs
+            String errors = "";
+            errors += validationField(emailCentre, "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[a-z]{2,6}$", "Email is invalid <br>");
+            errors += validationField(passwordCentre, "^.{6,30}$", "Error must have beetwen 6 and 30 caracter<br>");
+            errors += validationField(gsm, "^(\\+212|0)[0-9]{9}$", "Number gsm is invalid<br>");
+            if (!errors.isEmpty()) {
+                request.setAttribute("flashMessageFaild", errors);
+                returnFormulaire(request, response);
+            } else {
 
-                    Admin admin=(Admin) session.getAttribute("admin");
-                    System.out.println(admin.getIdAdmin());
-                    Centre centre=new Centre();
-                    centre.setNom_centre(nomCentre);
-                    centre.setEmail_centre(emailCentre);
-                    centre.setPassword_centre(passwordCentre);
-                    centre.setAdresse_centre(addresseCentre);
-                    centre.setEmail_admin(admin.getEmailAdmin());
-                    centre.setId_ville(Integer.parseInt(strIdVille));
-                    centre.setTel_centre(gsm);
+                Centre centre = new Centre();
+                centre.setNameCentre(nomCentre);
+                centre.setEmailCentre(emailCentre);
+                centre.setPasswordCentre(passwordCentre);
+                centre.setAdresseCentre(addresseCentre);
+                centre.setIdVille(Integer.parseInt(strIdVille));
+                centre.setTeleCentre(gsm);
 
-                    Centre centre1 = centreDao.trouver(emailCentre.trim());
-                    if(centre1 != null){
-                        centreDao.creer(centre);
-                            request.setAttribute("flashMessageSuccess","Centre has been added");
-                            response.sendRedirect("/dashboard");
+                Centre centre1 = centreDao.trouver(centre.getEmailCentre());
 
-
-                    }else {
-                        request.setAttribute("flashMessageFaild", "Mail is already exist");
-
-                        response.sendRedirect("/dashboard");
-                    }
-
+                if (centre1 == null) {
+                    centreDao.creer(centre);
+                    request.setAttribute("flashMessageSuccess", "Le centre est ajouté avec succes");
+                } else {
+                    request.setAttribute("flashMessageFaild", "l'email existe déja");
                 }
+
             }
         }
+    }else if(modifier!=null){
 
-    }
+       String nomCentre = request.getParameter("nom");
+       String emailCentre = request.getParameter("email");
+       String addresseCentre = request.getParameter("addresse");
+       int idCentre= Integer.parseInt(request.getParameter("idCentre"));
+       String gsm = request.getParameter("tele");
+       Centre centre1 = centreDao.getCentreById(idCentre);
+       Centre centre = new Centre();
+       centre.setNameCentre(nomCentre);
+       centre.setEmailCentre(emailCentre);
+       centre.setPasswordCentre(centre.getPasswordCentre());
+       centre.setAdresseCentre(addresseCentre);
+       centre.setIdVille(centre.getIdVille());
+       centre.setTeleCentre(gsm);
+           centreDao.modifier(centre);
+   }else if(supprimer!=null){
+          int idCentre=Integer.parseInt(request.getParameter("idCentre"));
+          centreDao.supprimer(idCentre);
+   }
+        List<Centre> centres=centreDao.lister();
+        List<Ville> villes=villeDao.lister();
+        request.setAttribute("villes",villes);
+        request.setAttribute("centres",centres);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/ajouterCentre.jsp").forward(request,response);
+        }
+
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // return formullaire centre
-        session=request.getSession();
-        if(session.getAttribute("admin")==null){
-            response.sendRedirect("/admin");
-        }else{
+            List<Centre> centres=centreDao.lister();
             List<Ville> villes=villeDao.lister();
             request.setAttribute("villes",villes);
+            request.setAttribute("centres",centres);
             this.getServletContext().getRequestDispatcher("/WEB-INF/ajouterCentre.jsp").forward(request,response);
-        }
+
 
     }
     private void returnFormulaire(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

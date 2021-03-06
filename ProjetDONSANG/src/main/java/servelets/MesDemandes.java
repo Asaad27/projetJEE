@@ -1,5 +1,6 @@
 package servelets;
 
+import autre.Autre;
 import beans.*;
 
 import dao.*;
@@ -22,22 +23,41 @@ public class MesDemandes extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       Utilisateur utilisateur=(Utilisateur)request.getSession().getAttribute("utilisateur");
+        int page=1;
+        int nbRecordsPerPage=8;
+        if(request.getParameter("pageCourante")!=null){
+             page=Integer.parseInt(request.getParameter("pageCourante"));
+        }
+        Utilisateur utilisateur=(Utilisateur)request.getSession().getAttribute("utilisateur");
        Long idUser=utilisateur.getIdutilisateur();
-        List<DemandeUtilisateur> mesdemandes =demandeDao.getDemandsUser(idUser);
+        List<DemandeUtilisateur> demandes=demandeDao.getDemandsUser(idUser);
+        int nbRecords=demandeDao.getNbRecords();
+        int nbPages=(int)Math.ceil(nbRecords*1.0/nbRecordsPerPage);
+        List<DemandeUtilisateur> mesdemandes = Autre.filterPagination(demandes,(page-1)*nbRecordsPerPage,nbRecordsPerPage*(page) < nbRecords?nbRecordsPerPage*(page) :(nbRecords) );
+
+        request.setAttribute("nbPages",nbPages);
+        request.setAttribute("pageCourante",page);
         request.setAttribute("requests",mesdemandes);
         this.getServletContext().getRequestDispatcher(MESDEMANDES_FORM).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int page=1;
+        int nbRecordsPerPage=5;
+        if(request.getParameter("pageCourante")!=null){
+            page=Integer.parseInt(request.getParameter("pageCourante"));
+        }
         String modifications="";
         int idDemande = Integer.parseInt(request.getParameter("idDemande"));
 
-                String titre=request.getParameter("titre");
+
         Utilisateur utilisateur=(Utilisateur)request.getSession().getAttribute("utilisateur");
         Long idUser=utilisateur.getIdutilisateur();
-        List<DemandeUtilisateur> mesdemandes =demandeDao.getDemandsUser(idUser);
+        List<DemandeUtilisateur> demandes =demandeDao.getDemandsUser(idUser);
+        int nbRecords=demandeDao.getNbRecords();
+        int nbPages=(int)Math.ceil(nbRecords*1.0/nbRecordsPerPage);
+        List<DemandeUtilisateur> mesdemandes = Autre.filterPagination(demandes,(page-1)*nbRecordsPerPage,nbRecordsPerPage*(page) < nbRecords?nbRecordsPerPage*(page) :(nbRecords) );
         if(demandeDao.updateDemande(idDemande)){
             modifications="La demande est fermée !!!";
 
@@ -48,6 +68,8 @@ public class MesDemandes extends HttpServlet {
 
         request.setAttribute("requests",mesdemandes);
         request.setAttribute("modif",modifications);
+        request.setAttribute("nbPages",nbPages);
+        request.setAttribute("pageCourante",page);
         response.sendRedirect("MesDemandes");
 
     }
