@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ProjetDONSANG:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ce11dec7-deba-402a-89c0-b60ed6c5069a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ProjetDONSANG_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_0_SP1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_arquillian_api_1_0_0_Alpha5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_arquillian_impl_base_1_0_0_Alpha1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_arquillian_junit_1_0_0_Alpha1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_arquillian_spi_1_0_0_Alpha5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_test_api_1_7_0_Alpha8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_interceptor_jboss_interceptor_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_descriptors_shrinkwrap_descriptors_api_0_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_descriptors_shrinkwrap_descriptors_api_base_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_api_1_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_impl_base_1_0_0_alpha_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_spi_1_0_0_alpha_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servelets/Deconnexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/autre/Autre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/autre/Autre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servelets/DashBoardAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servelets/DashBoardAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servelets/LoginAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servelets/LoginAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servelets/adminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servelets/adminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/autre/Autre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/autre/Autre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans/InscrireUtilisateurForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans/InscrireUtilisateurForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAOConcerner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAOConcerner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAOConcernerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAOConcernerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAODemandeUtilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAODemandeUtilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAODemandeUtilisateurImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAODemandeUtilisateurImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAOUtilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAOUtilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAOUtilisateurImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAOUtilisateurImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servelets/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servelets/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servelets/MesDemandes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servelets/MesDemandes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servelets/UsersDemandes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servelets/UsersDemandes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servelets/ajouterdemande.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servelets/ajouterdemande.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servelets/contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servelets/contact.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1ohezej9nFvq5g2MD3pXjwGJIMv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="JUnit.JunitTest.testLister">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JunitTest.testLister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDONSANG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JunitTest" />
+      <option name="METHOD_NAME" value="testLister" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test3.testLister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDONSANG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test3" />
+      <option name="METHOD_NAME" value="testLister" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.59" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="ProjetDONSANG:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ProjetDONSANG_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="b587f295-a5aa-4cfd-8cbe-5e6912320b19" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ProjetDONSANG:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JunitTest.testLister" />
+        <item itemvalue="JUnit.Test3.testLister" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce11dec7-deba-402a-89c0-b60ed6c5069a" name="Default Changelist" comment="" />
+      <created>1613743512931</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613743512931</updated>
+      <workItem from="1613743514017" duration="51000" />
+      <workItem from="1613770271273" duration="1369000" />
+      <workItem from="1613772873758" duration="1340000" />
+      <workItem from="1613774230580" duration="619000" />
+      <workItem from="1613813712246" duration="208000" />
+      <workItem from="1613816603295" duration="98000" />
+      <workItem from="1613819733595" duration="112000" />
+      <workItem from="1613821751968" duration="258000" />
+      <workItem from="1613828321014" duration="738000" />
+      <workItem from="1613834625207" duration="1446000" />
+      <workItem from="1613902178733" duration="1170000" />
+      <workItem from="1613903388920" duration="241000" />
+      <workItem from="1614243071541" duration="2911000" />
+      <workItem from="1614248140234" duration="1742000" />
+      <workItem from="1615030588935" duration="1326000" />
+      <workItem from="1615047162220" duration="1223000" />
+      <workItem from="1615059930903" duration="1280000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/JunitTest.java</url>
+          <line>6</line>
+          <properties class="JunitTest" method="testLister">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

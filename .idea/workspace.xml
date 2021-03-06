@@ -5,93 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b81f3eaa-6db3-4f13-978d-f7634289ac6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ProjetDONSANG_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ProjetDONSANG_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/artifacts/ProjetDONSANG_war_exploded.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_mail_mail_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/contactus.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/lib/contactus.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/img/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/img/logo.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_enterprise_cdi_api_1_0_SP1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__junit_junit_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_arquillian_arquillian_api_1_0_0_Alpha5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_arquillian_arquillian_impl_base_1_0_0_Alpha1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_arquillian_arquillian_junit_1_0_0_Alpha1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_arquillian_arquillian_spi_1_0_0_Alpha5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_test_api_1_7_0_Alpha8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_interceptor_jboss_interceptor_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_shrinkwrap_descriptors_shrinkwrap_descriptors_api_0_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_shrinkwrap_descriptors_shrinkwrap_descriptors_api_base_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_api_1_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_impl_base_1_0_0_alpha_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_spi_1_0_0_alpha_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetDONSANG/ProjetDONSANG.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/artifacts/ProjetDONSANG_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/artifacts/ProjetDONSANG_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/artifacts/ProjetDONSANG_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/artifacts/ProjetDONSANG_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/ProjetDONSANG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/ProjetDONSANG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/autre/Autre.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/autre/Autre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/autre/EmailUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/autre/EmailUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/DemandeUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/DemandeUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/GroupSang.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/GroupSang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/InscrireUtilisateurForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/InscrireUtilisateurForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/Ville.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/Ville.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/concerner.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/beans/concerner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/com/example/ProjetDONSANG/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/com/example/ProjetDONSANG/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOConcerner.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOConcerner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOConcernerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOConcernerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOConfigurationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOConfigurationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAODemandeUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAODemandeUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAODemandeUtilisateurImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAODemandeUtilisateurImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOGroupSang.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOGroupSang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOGroupSangImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOGroupSangImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOUtilisateurImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOUtilisateurImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOUtilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOUtilitaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOVille.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOVille.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOVilleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/DAOVilleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/dao.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/dao/dao.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/Inscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/MesDemandes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/MesDemandes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/TestDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/TestDon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/UsersDemandes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/UsersDemandes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/ajouterdemande.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/ajouterdemande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/Inscription.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/Inscription.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/MesDemandes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/MesDemandes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/Style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/TestDon.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/TestDon.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/UsersDemandes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/UsersDemandes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/addDemande.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/addDemande.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/lib/Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/lib/Style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/ProjetDONSANG-1.0-SNAPSHOT/WEB-INF/addDemande.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/ProjetDONSANG-1.0-SNAPSHOT/WEB-INF/addDemande.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetJEE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projetJEE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/DashBoardAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/DashBoardAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/LoginAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/LoginAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/adminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/src/main/java/servelets/adminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/autre/Autre.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/autre/Autre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/beans/InscrireUtilisateurForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/beans/InscrireUtilisateurForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOConcerner.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOConcerner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOConcernerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOConcernerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAODemandeUtilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAODemandeUtilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAODemandeUtilisateurImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAODemandeUtilisateurImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOUtilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOUtilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOUtilisateurImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/dao/DAOUtilisateurImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/MesDemandes.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/MesDemandes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/UsersDemandes.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/UsersDemandes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/ajouterdemande.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/ajouterdemande.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetDONSANG/target/classes/servelets/contact.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,6 +256,7 @@
       <workItem from="1613915279379" duration="2216000" />
       <workItem from="1615029879489" duration="394000" />
       <workItem from="1615030300520" duration="1046000" />
+      <workItem from="1615058470340" duration="1066000" />
     </task>
     <servers />
   </component>

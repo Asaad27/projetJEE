@@ -3,7 +3,7 @@ package servelets;
 import beans.Admin;
 import beans.Centre;
 import beans.Ville;
-import dao.DAOCentre;
+import dao.daoCentre;
 import dao.DAOFactory;
 import dao.DAOVille;
 
@@ -29,8 +29,8 @@ public class adminMenu extends HttpServlet {
             }
         }else{
             DAOFactory daoFactory= DAOFactory.getInstance();
-            DAOCentre daoCentre = daoFactory.getCentreDao();
-            DAOVille daoville=daoFactory.getVilleDao();
+            daoCentre daoCentre = daoFactory.getCentreDAO();
+            DAOVille daoville=daoFactory.getVilleDAO();
             List<Centre> centres=daoCentre.lister();
             request.setAttribute("centres",centres);
             List<Ville> villes= daoville.lister();

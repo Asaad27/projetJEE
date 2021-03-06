@@ -3,7 +3,7 @@ package servelets;
 import beans.Admin;
 import beans.Centre;
 import beans.Ville;
-import dao.DAOCentre;
+import dao.daoCentre;
 import dao.DAOFactory;
 import dao.DAOVille;
 
@@ -25,7 +25,7 @@ public class DashBoardAdmin extends HttpServlet {
             response.sendRedirect("/loginAdmin");
         }else{
             DAOFactory daoFactory=DAOFactory.getInstance();
-            DAOCentre centreDao=daoFactory.getCentreDao();
+            daoCentre centreDao=daoFactory.getCentreDAO();
             DAOVille villeDao=daoFactory.getVilleDAO();
             List<Centre> centres=centreDao.lister();
             request.setAttribute("centres",centres);

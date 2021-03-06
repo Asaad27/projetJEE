@@ -25,7 +25,7 @@ public class LoginAdmin extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         daoFactory = DAOFactory.getInstance();
-        this.adminDAO = daoFactory.getAdminDao();
+        this.adminDAO = daoFactory.getAdminDAO();
 
     }
 

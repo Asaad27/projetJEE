@@ -58,6 +58,13 @@ background-color: rgba(255,255,255,0.5);border-color: rgba(255,255,255,0.5);z-in
 
             </a>
         </li>
+        <li class="nav-item " style="margin-right: 10px;display: ${( empty sessionScope.admin)  &&  ( empty sessionScope.centre) && ( empty sessionScope.utilisateur) ? 'none': 'block'}
+                ">
+            <a href="Deconnexion" class="nav-link border border-light rounded">
+                <span class="glyphicon glyphicon-user" ></span>
+                Deconnexion
+
+            </a>
 
 
 
