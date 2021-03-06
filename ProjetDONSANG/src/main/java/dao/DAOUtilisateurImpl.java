@@ -16,10 +16,11 @@ public class DAOUtilisateurImpl implements DAOUtilisateur {
     private static final String SQL_SELECT_PAR_EMAIL = "SELECT * FROM utilisateur WHERE email_utilisateur = ?";
     private static final String SQL_INSERT = "INSERT INTO utilisateur (nom_utilisateur,prenom_utilisateur,cin_utilisateur,telephone_utilisateur,email_utilisateur,password_utilisateur,id_ville,id_groupe) "
             + "VALUES (?, ?, ?,?,?,?,?,?)";
-    private static final String SQL_SELECT_PAR_ville = "SELECT id_utilisateur, nom_utilisateur,prenom_utilisateur,cin_utilisateur,telephone_utilisateur,email__utilisateur,password_utilisateur,id_ville,id_group FROM "
+    private static final String SQL_SELECT_PAR_ville = "SELECT id_utilisateur, nom_utilisateur,prenom_utilisateur,cin_utilisateur,telephone_utilisateur,email_utilisateur,password_utilisateur,id_ville,id_groupe FROM "
             + "Utilisateur WHERE id_ville= ?";
     private static final String SQL_SELECT_PAR_ID = "SELECT * FROM utilisateur WHERE id_utilisateur= ?";
-
+    private static final String SQL_SELECT_PASSWORD = "SELECT password_utilisateur FROM utilisateur WHERE id_utilisateur= ?";
+    private static final String SQL_UPDATE="UPDATE utilisateur set nom_utilisateur=?,prenom_utilisateur=?,telephone_utilisateur=?,email_utilisateur=?,id_ville=?  where id_utilisateur=?";
     private DAOFactory    daoFactory;
 
     DAOUtilisateurImpl( DAOFactory daoFactory ) {
@@ -146,7 +147,7 @@ public class DAOUtilisateurImpl implements DAOUtilisateur {
                 utilisateur.setPrenomutilisateur(resultSet.getString("prenom_utilisateur"));
                 utilisateur.setIdvilleutilisateur(resultSet.getInt("id_ville"));
                 utilisateur.setIdgrouputilisateur(resultSet.getInt("id_groupe"));
-                utilisateur.setTeleutilisateur(resultSet.getString("tele_utilisateur"));
+                utilisateur.setTeleutilisateur(resultSet.getString("telephone_utilisateur"));
                 utilisateurList.add(utilisateur);
             }
             return utilisateurList;
@@ -174,6 +175,54 @@ public class DAOUtilisateurImpl implements DAOUtilisateur {
             fermeturesSilencieuses(preparedStatement, connexion);
         }
         return utilisateur;
+    }
+    public String getPasswordUtilisateur(Long idUser)throws DAOException{
+        Connection connexion = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        Utilisateur utilisateur = null;
+        String password="";
+        try {
+            connexion = daoFactory.getConnection();
+            preparedStatement = initialisationRequetePreparee(connexion, SQL_SELECT_PASSWORD,   false ,idUser);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+               password=resultSet.getString("password_utilisateur");
+            }
+
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            fermeturesSilencieuses(preparedStatement, connexion);
+        }
+        return password;
+    }
+    public boolean updateUtilisateur(Utilisateur utilisateur) throws DAOException{
+        Connection connexion = null;
+        PreparedStatement preparedStatement = null;
+        int statue;
+        boolean etat=false;
+
+        try {
+            connexion = daoFactory.getConnection();
+            preparedStatement = initialisationRequetePreparee(connexion, SQL_UPDATE,   false ,utilisateur.getNomutilisateur(),
+                    utilisateur.getPrenomutilisateur(),utilisateur.getTeleutilisateur(),utilisateur.getEmailutilisateur()
+                    ,utilisateur.getIdvilleutilisateur(),utilisateur.getIdutilisateur());
+            statue = preparedStatement.executeUpdate();
+            if (statue==0) {
+                throw new DAOException("problèmme d'update");
+            }
+            else{
+                etat=true;
+            }
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            fermeturesSilencieuses(preparedStatement, connexion);
+        }
+        return etat;
+
+
     }
 
 }

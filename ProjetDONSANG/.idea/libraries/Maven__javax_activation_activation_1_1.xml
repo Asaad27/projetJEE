@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="Maven: javax.activation:activation:1.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-sources.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/build/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/demo/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/generated/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/legacy/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/main/core-api/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/main/core-impl/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/main/protocol-impl/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/main/user-api/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/main/user-impl/java" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22/src/test/java" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.22" recursive="false" />
+  </library>
+</component>

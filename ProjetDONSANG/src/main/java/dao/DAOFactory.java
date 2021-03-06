@@ -7,7 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DAOFactory {
+public class
+
+DAOFactory {
 
     private static final String FICHIER_PROPERTIES = "dao.properties";
     private static final String PROPERTY_URL = "url";
@@ -62,4 +64,22 @@ public class DAOFactory {
     public DAOConcernerImpl getConcernerDAO(){
         return new DAOConcernerImpl(this);
     }
+    public daoCentreImpl getCentreDAO(){
+        return new daoCentreImpl(this);
+    }
+
+    public DAODemandeCentreImpl  getDemandeCentreDAO(){
+        return new  DAODemandeCentreImpl (this);
+    }
+    public DAOCompagneImpl getCompagneDAO(){
+        return  new DAOCompagneImpl(this);
+    }
+    public DAOStockImpl getStockDAO(){
+        return  new DAOStockImpl(this);
+    }
+    public DAOAdminImpl getAdminDAO(){
+        return  new DAOAdminImpl(this);
+    }
 }
+
+

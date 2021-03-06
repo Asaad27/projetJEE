@@ -19,6 +19,7 @@ public class DAOConcernerImpl implements DAOConcerner{
     private static final String SELECT_PAR_DATE="SELECT id_demandeUtil FROM demandeutil WHERE date_demande=?";
     private static String INSERT_QUERY="INSERT INTO concerne_demandeutil(id_demandeUtil,id_groupe) VALUES(?,?)";
     private static String DELETE_QUERY="delete FROM concerne_demandeutil where id_demandeUtil = ? and id_groupe = ?";
+    private static String INSERT_QUERY_Centre="INSERT INTO concerne_demandecentre(id_demandecentre,id_groupe) VALUES(?,?)";
     private DAOFactory daoFactory;
 
     public DAOConcernerImpl(DAOFactory daoFactory) {
@@ -30,6 +31,7 @@ public class DAOConcernerImpl implements DAOConcerner{
 
         return concerneDemande;
     }
+
 
     @Override
     public boolean setAllGroupsConcerned(DemandeUtilisateur demande) throws DAOException {
@@ -115,4 +117,51 @@ public class DAOConcernerImpl implements DAOConcerner{
     public boolean deleteConcerneDemande(int idDemande, int idGroupeSang) throws DAOException {
         return false;
     }
+    public boolean setAllGroupsConcernedCentre(DemandeCentre demande) throws DAOException {
+        Connection connexion = null;
+        PreparedStatement preparedStatement1 = null;
+        PreparedStatement preparedStatement2 = null;
+        ResultSet resultSet1 = null;
+        ResultSet resultSet2 = null;
+        boolean etat=false;
+        try {
+            /* R�cup�ration d'une connexion depuis la Factory */
+
+            connexion = daoFactory.getConnection();
+
+
+            for (concerner concerneDemande : demande.getSangGroups()) {
+                concerneDemande.setIdDemande(demande.getIdDemande());
+                try {
+                    preparedStatement2 = initialisationRequetePreparee(connexion, INSERT_QUERY_Centre, false, concerneDemande.getIdDemande(), concerneDemande.getIdGroupeSang());
+                    int statue = preparedStatement2.executeUpdate();
+                    if (statue == 0) {
+                        etat = false;
+                    } else {
+                        etat = true;
+                    }
+
+                } catch (SQLException e) {
+                    throw new DAOException(e);
+                }
+
+            }
+
+
+        } catch ( SQLException e ) {
+            throw new DAOException( e );
+        }
+        finally {
+            fermeturesSilencieuses( resultSet1, preparedStatement1, connexion );
+            fermeturesSilencieuses( resultSet2, preparedStatement2, connexion );
+
+
+        }
+        return etat;
+
+
+
+
+    }
+
 }

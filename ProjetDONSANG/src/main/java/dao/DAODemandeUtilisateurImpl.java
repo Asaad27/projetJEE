@@ -13,12 +13,23 @@ import static dao.DAOUtilitaire.*;
 
 public class DAODemandeUtilisateurImpl implements DAODemandeUtilisateur {
     private static final String SQL_INSERT = "INSERT INTO demandeutil(date_demande,description_demande,estActive,estUrgente,id_utilisateur,titre_demande) VALUES(?,?,?,?,?,?);";
-    private static final String SQL_SELECT_Demande = "SELECT demandeutil.id_demandeUtil,demandeutil.titre_demande,demandeutil.estUrgente," +
+    private static final String SQL_SELECT_Demande = "SELECT demandeutil.id_demandeUtil,demandeutil.titre_demande,demandeutil.estUrgente,demandeutil.estActive  ," +
             "demandeutil.id_utilisateur,demandeutil.date_demande ,demandeutil.description_demande FROM demandeutil,utilisateur WHERE utilisateur.id_utilisateur=demandeutil.id_utilisateur and demandeutil.estActive=?  and utilisateur.id_ville= ? ORDER BY demandeutil.date_demande DESC";
     private static final String SQL_UPDATE = "update demandeutil set estActive=? where id_demandeUtil=?";
     private static final String SQL_SELECT_USER = "select * from demandeutil where id_utilisateur= ? and estActive=?";
+    private static final String SQL_SELECT_USERDEMANDE= "select * from demandeutil where id_utilisateur= ? ORDER BY id_utilisateur  DESC";
+    private static final String SQL_NB_ROWS = " SELECT FOUND_ROWS()";
     private DAOFactory daoFactory;
     private DAOConcernerImpl concerner;
+    private int nbRecords;
+
+    public int getNbRecords() {
+        return nbRecords;
+    }
+
+    public void setNbRecords(int nbRecords) {
+        this.nbRecords = nbRecords;
+    }
 
     public DAODemandeUtilisateurImpl(DAOFactory daoFactory) {
         this.daoFactory = daoFactory;
@@ -84,13 +95,19 @@ public class DAODemandeUtilisateurImpl implements DAODemandeUtilisateur {
                 listes.add(map(resultSet));
 
             }
+            resultSet.close();
+            resultSet=preparedStatement.executeQuery(SQL_NB_ROWS);
+            if(resultSet.next()){
+                setNbRecords(resultSet.getInt(1));
+            }
 
 
         } catch (SQLException e) {
             throw new DAOException(e);
         } finally {
-            fermeturesSilencieuses( preparedStatement, connexion);
+            fermeturesSilencieuses( resultSet,preparedStatement, connexion);
         }
+
         return listes;
 
     }
@@ -107,12 +124,18 @@ public class DAODemandeUtilisateurImpl implements DAODemandeUtilisateur {
                 listes.add(map(resultSet));
 
             }
+            resultSet.close();
+            resultSet=preparedStatement.executeQuery(SQL_NB_ROWS);
+            if(resultSet.next()){
+                setNbRecords(resultSet.getInt(1));
+            }
+
 
 
         } catch (SQLException e) {
             throw new DAOException(e);
         } finally {
-            fermeturesSilencieuses( preparedStatement, connexion);
+            fermeturesSilencieuses(resultSet, preparedStatement, connexion);
         }
         return listes;
     }
@@ -139,6 +162,34 @@ public class DAODemandeUtilisateurImpl implements DAODemandeUtilisateur {
         }
         return etat;
 
+    }
+    public List<DemandeUtilisateur> getAllDemandsUser(Long idUser) throws DAOException{
+        Connection connexion = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        List<DemandeUtilisateur> listes=new ArrayList<DemandeUtilisateur>();
+        try {
+            connexion = daoFactory.getConnection();
+            preparedStatement = initialisationRequetePreparee(connexion, SQL_SELECT_USERDEMANDE, false, idUser);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                listes.add(map(resultSet));
+
+            }
+            resultSet.close();
+            resultSet=preparedStatement.executeQuery(SQL_NB_ROWS);
+            if(resultSet.next()){
+                setNbRecords(resultSet.getInt(1));
+            }
+
+
+
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            fermeturesSilencieuses(resultSet, preparedStatement, connexion);
+        }
+        return listes;
     }
 }
 

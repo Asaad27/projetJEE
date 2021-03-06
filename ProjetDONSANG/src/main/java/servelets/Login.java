@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
                 if(utilisateur != null){
                     HttpSession session = request.getSession();
                     session.setAttribute("utilisateur", utilisateur);
-                    response.sendRedirect("MesDemandes");
+                    response.sendRedirect("contact");
 
 
                 }

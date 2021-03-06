@@ -6,6 +6,6 @@ public interface DAODemandeUtilisateur {
    public List<DemandeUtilisateur> getAllDemands(int id_ville) throws DAOException;
    public boolean updateDemande(int idDemande) throws DAOException;
    public List<DemandeUtilisateur> getDemandsUser(Long idUser) throws DAOException;
-
+   public List<DemandeUtilisateur> getAllDemandsUser(Long idUser) throws DAOException;
 
 }

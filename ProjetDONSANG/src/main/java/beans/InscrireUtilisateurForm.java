@@ -129,7 +129,7 @@ public class InscrireUtilisateurForm {
 
     }
     public void validationtele(String tele) throws Exception{
-        if( tele != null && tele.trim().length() <9) {
+        if( tele != null && tele.trim().length() <10) {
             throw new Exception("le t�l�phone doit contenir au moins 9 num�ros");
         } if(tele ==null) {
             throw new Exception( "Merci de saisir votre téléphone." );
